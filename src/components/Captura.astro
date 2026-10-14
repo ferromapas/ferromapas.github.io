@@ -1,0 +1,29 @@
+---
+// Captura de Google Earth. Astro genera versiones WebP de varios anchos (srcset) y
+// el enlace abre la versión grande en una pestaña nueva.
+import { Image, getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  caption: string;
+  // Ancho aproximado en pantalla grande: elige qué tamaños del srcset se generan.
+  grande?: boolean;
+}
+
+const { src, alt, caption, grande = false } = Astro.props;
+const widths = grande ? [640, 960, 1280, 1568] : [360, 540, 720, 1080];
+const sizes = grande
+  ? '(min-width: 76rem) 71rem, calc(100vw - 2rem)'
+  : '(min-width: 76rem) 22.5rem, (min-width: 52rem) 31vw, calc(100vw - 2rem)';
+const completa = await getImage({ src, format: 'webp', quality: 85 });
+---
+<figure>
+  <a class="zoom" href={completa.src} target="_blank" rel="noopener">
+    <Image src={src} alt={alt} widths={widths} sizes={sizes} format="webp" quality={78} />
+    <span class="zoom-hint" aria-hidden="true">Ampliar</span>
+    <span class="visually-hidden">(se abre en una pestaña nueva)</span>
+  </a>
+  <figcaption>{caption}</figcaption>
+</figure>

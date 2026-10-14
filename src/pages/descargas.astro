@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Descargas" description="Descargá Ferromapas: el mapa ferroviario de Argentina para Google Earth (KMZ) y para GPS Garmin (MapSource).">
+  <article class="page">
+    <h1>Descargas</h1>
+    <p>
+      Los mapas son de libre descarga bajo la
+      <a href="/licencia-de-ferromapas/">licencia de Ferromapas</a>.
+    </p>
+
+    <ul class="downloads">
+      <li class="download" style="--c: var(--l-roca)">
+        <h2>Ferromapas para Google Earth (KMZ)</h2>
+        <p class="meta">Versión 1.0.0</p>
+        <p>Abrilo en Google Earth para Web, para móviles o para ordenadores, o en cualquier aplicación GIS que lea KML/KMZ.</p>
+        <a class="btn" href="/descargas/ferromapas_v1.0.0.kmz" download>Descargar KMZ</a>
+      </li>
+      <li class="download" style="--c: var(--l-sarmiento)">
+        <h2>Ferromapas para MapSource – Garmin GPS</h2>
+        <p class="meta">Versión 1.0.0</p>
+        <p>Instalador para cargar el mapa en un GPS Garmin por medio de MapSource.</p>
+        <a class="btn" href="/descargas/ferromapas_v1.0.0.msi" download>Descargar para Garmin</a>
+      </li>
+    </ul>
+  </article>
+</Base>

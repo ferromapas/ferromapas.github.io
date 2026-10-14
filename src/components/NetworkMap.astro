@@ -1,0 +1,55 @@
+---
+// Diagrama esquemático (no a escala) de las grandes líneas ferroviarias
+// que salen de Buenos Aires. Es decorativo: el mapa real está en el KMZ.
+---
+<figure class="network-map">
+  <svg viewBox="0 0 420 640" role="img" aria-labelledby="nm-title nm-desc">
+    <title id="nm-title">Diagrama de la red ferroviaria argentina</title>
+    <desc id="nm-desc">Esquema de las seis líneas troncales que parten de Buenos Aires: Mitre, Belgrano, San Martín, Sarmiento, Roca y Urquiza, con algunas de sus estaciones cabecera.</desc>
+
+    <g class="nm-lines" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="nm-line" pathLength="1" style="--c: var(--l-belgrano)" d="M310 330 L310 250 L280 220 L280 110 L250 80 L250 48 M250 80 L150 80" />
+      <path class="nm-line" pathLength="1" style="--c: var(--l-mitre)" d="M310 330 L250 270 L250 200 L210 160 M250 270 L190 210" />
+      <path class="nm-line" pathLength="1" style="--c: var(--l-urquiza)" d="M310 330 L350 290 L350 190 L380 160" />
+      <path class="nm-line" pathLength="1" style="--c: var(--l-sanmartin)" d="M310 330 L170 330 L120 280 L70 280" />
+      <path class="nm-line" pathLength="1" style="--c: var(--l-sarmiento)" d="M310 330 L280 360 L210 360 L180 390" />
+      <path class="nm-line" pathLength="1" style="--c: var(--l-roca)" d="M310 330 L310 430 L260 480 L140 480 L110 510 M260 480 L260 590" />
+    </g>
+
+    <g class="nm-stops">
+      <circle cx="250" cy="48" r="5" />
+      <circle cx="250" cy="80" r="5" />
+      <circle cx="150" cy="80" r="5" />
+      <circle cx="210" cy="160" r="5" />
+      <circle cx="190" cy="210" r="5" />
+      <circle cx="250" cy="270" r="5" />
+      <circle cx="380" cy="160" r="5" />
+      <circle cx="170" cy="330" r="5" />
+      <circle cx="70" cy="280" r="5" />
+      <circle cx="120" cy="280" r="5" />
+      <circle cx="180" cy="390" r="5" />
+      <circle cx="260" cy="480" r="5" />
+      <circle cx="110" cy="510" r="5" />
+      <circle cx="260" cy="590" r="5" />
+      <rect class="nm-hub" x="296" y="316" width="28" height="28" rx="14" />
+    </g>
+
+    <g class="nm-labels">
+      <text x="262" y="44">Jujuy</text>
+      <text x="262" y="84">Salta</text>
+      <text x="150" y="66" text-anchor="middle">Socompa</text>
+      <text x="198" y="164" text-anchor="end">Tucumán</text>
+      <text x="178" y="214" text-anchor="end">Córdoba</text>
+      <text x="238" y="274" text-anchor="end">Rosario</text>
+      <text x="380" y="146" text-anchor="middle">Posadas</text>
+      <text x="170" y="350" text-anchor="middle">Villa Mercedes</text>
+      <text x="120" y="266" text-anchor="middle">Mendoza</text>
+      <text x="70" y="300" text-anchor="middle">Las Cuevas</text>
+      <text x="168" y="404" text-anchor="end">Toay</text>
+      <text x="272" y="476">Bahía Blanca</text>
+      <text x="110" y="532" text-anchor="middle">Zapala</text>
+      <text x="272" y="594">Patagones</text>
+      <text class="nm-hub-label" x="334" y="335">Buenos Aires</text>
+    </g>
+  </svg>
+</figure>

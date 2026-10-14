@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+
+const colaboradores: [string, string][] = [
+  ['Accornero, Dante', 'información sobre del Ferrocarril Belgrano en Cuyo, pero sobre todo, del Ferrocarril Trasandino Central'],
+  ['Arcas, Marcelo', 'mapa Desvío Lonco Vaca'],
+  ['Becerra, José', 'mapas zona San Lorenzo, Santa Fe'],
+  ['Bocanegra, Roberto', 'traza GPS viaje Tren Nacional de la Vendimia'],
+  ['Bottaro, Sebastián', 'mapa Santa Fe'],
+  ['Castelo, Gabriel', 'dibujó varias trazas'],
+  ['Domizi, Andrea', 'toda su gran ayuda y tiempo'],
+  ['Garnica, Tito', 'información ramal Espejo – Gustavo André (FCGSM)'],
+  ['Grene, Daniel', 'traza GPS viaje Tren Nacional por la Paz y No Violencia'],
+  ['Kauak, Domingo', 'algunos dibujos sobre el Ferrocarril Trasandino Central Chileno'],
+  ['López, Gustavo', 'itinerarios, lista de ramales, mapas de ramales'],
+  ['Mäntaras, Jorge', 'información desvíos varios del Ferrocarril Belgrano'],
+  ['Marietán, Fernando', 'Palmira – Tres Porteñas y Espejo – Gustavo André'],
+  ['Nallib, Andrés', 'desvíos varios San Rafael'],
+  ['Rogé, Marcelo', 'información sobre el Ferrocarril Trasandino Central'],
+  ['Sagristani, Rubén', 'dibujó varias trazas'],
+  ['Skerk, Carlos', 'itinerarios y lista de ramales'],
+  ['Stauffer, José', 'información sobre el Ferrocarril Trasandino del Norte – Socompa'],
+  ['Trigo, Gustavo', 'desvíos varios San Juan'],
+  ['Villareal, Rodrigo', 'por ser el principal impulsor de las caminatas Travesía del Tren Trasandino'],
+];
+---
+<Base title="Créditos" description="Autores, colaboradores, fuentes y agradecimientos de Ferromapas.">
+  <article class="page">
+    <h1>Créditos de Ferromapas</h1>
+    <p>
+      Los mapas de Ferromapas están divididos por Ferrocarriles y luego por ramales. Cada
+      Ferrocarril y sus ramales están dentro de carpetas diferentes. Dentro de los comentarios de
+      los ramales se encuentran los créditos de las personas que colaboraron.
+    </p>
+    <p>Los mapas pueden usarse para otras publicaciones, pero deben respetarse los créditos de los autores.</p>
+
+    <h2>Autores</h2>
+    <ul class="authors">
+      <li><strong>Pablo Anglat</strong> Mendoza</li>
+      <li><strong>Gino Nuñez</strong> Buenos Aires</li>
+      <li><strong>Rodrigo Respini</strong> Córdoba</li>
+    </ul>
+
+    <h2>Colaboradores</h2>
+    <p class="note">Ordenados por apellido.</p>
+    <dl class="people">
+      {colaboradores.map(([nombre, aporte]) => (
+        <div>
+          <dt>{nombre}</dt>
+          <dd>{aporte}</dd>
+        </div>
+      ))}
+    </dl>
+
+    <h2>Fuentes</h2>
+    <ul class="sources">
+      <li>
+        Biblioteca de itinerarios y horarios, aportados por: Sebastián Bottaro, Fernando Carnero,
+        Damián Di Pasquale, Jorge Faye, Gustavo Federico, Gustavo López, Jorge Männtaras, Mario
+        Marotti, Rubén Sagristani, Carlos Skerk, Ignacio Varela, Ignacio Vargas (Chile).
+        <span class="url">boletos.co.nr.elserver.com/pdf/Tabla.htm</span>
+      </li>
+      <li>Revista Todo Trenes.</li>
+      <li>Libro <cite>Ferrocarriles en Rosario</cite>, de Ángel Ferrer y Carlos Alberto Fernández Priotti.</li>
+      <li>
+        <a href="http://www.ferrocarrilesenelconosur.co.uk/" rel="noopener">Ferrocarriles del Cono Sur</a>:
+        detalles de la vía entre
+        <a href="http://www.ferrocarrilesenelconosur.co.uk/04Sx4comrivroute.html" rel="noopener">Comodoro Rivadavia y Colonia Sarmiento y ramales</a>,
+        <a href="http://www.ferrocarrilesenelconosur.co.uk/12Sapenvaldes.html" rel="noopener">Ferrocarril Península de Valdés</a> y
+        <a href="http://www.ferrocarrilesenelconosur.co.uk/09Sx2rfirtroute.html" rel="noopener">Red Ferro Industrial Río Turbio</a>.
+      </li>
+      <li>Dibujo Ramal Ferro Industrial Río Turbio por Oscar Alexis Boichetta.</li>
+      <li>Wikipedia: Ramal Ferro Industrial de Río Turbio, Ferrocarril de Península Valdés.</li>
+      <li><a href="https://mapa.buenosaires.gob.ar/" rel="noopener">Mapa Buenos Aires</a>.</li>
+    </ul>
+
+    <h2>Agradecimientos</h2>
+    <p>
+      A Stanislaw Kozicki, por haber donado una licencia personal de su producto
+      <a href="http://www.cgpsmapper.com/" rel="noopener">cGPSmapper</a>, para generar archivos para
+      GPS Garmin. Sin su ayuda, no hubiera sido posible generar los mapas para GPS Garmin.
+    </p>
+    <p>
+      Pablo Anglat quiere agradecer a su familia y sobre todo a su sra. Andrea Domizi por todo el
+      tiempo que les robó. También por todas las veces que lo ayudaron. ¡Y a Andrea, que tantos
+      kilómetros recorrieron juntos!
+    </p>
+  </article>
+</Base>

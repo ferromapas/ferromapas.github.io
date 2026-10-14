@@ -1,0 +1,22 @@
+{
+  "name": "ferromapas",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio estático de Ferromapas — mapa libre de la infraestructura ferroviaria de Argentina",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "engines": {
+    "node": ">=20.3"
+  },
+  "dependencies": {
+    "@fontsource-variable/overpass": "^5.1.0",
+    "astro": "^5.0.0",
+    "sharp": "^0.35.5"
+  },
+  "packageManager": "pnpm@12.11.2"
+}

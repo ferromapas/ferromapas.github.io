@@ -1,0 +1,25 @@
+---
+import { SITE } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="footer-lines" aria-hidden="true">
+    <span style="--c: var(--l-mitre)"></span>
+    <span style="--c: var(--l-belgrano)"></span>
+    <span style="--c: var(--l-sanmartin)"></span>
+    <span style="--c: var(--l-sarmiento)"></span>
+    <span style="--c: var(--l-roca)"></span>
+    <span style="--c: var(--l-urquiza)"></span>
+  </div>
+  <div class="footer-body">
+    <p>
+      <strong>Ferromapas</strong> © {year} Pablo Anglat, Gino Nuñez y Rodrigo Respini.
+      Mapas bajo licencia <a href="/licencia-de-ferromapas/">CC BY-NC-ND 2.5 AR</a>.
+    </p>
+    <p>
+      <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      <span aria-hidden="true"> / </span>
+      <a href={SITE.facebook} rel="noopener">Facebook</a>
+    </p>
+  </div>
+</footer>

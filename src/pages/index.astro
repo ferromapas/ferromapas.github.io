@@ -1,0 +1,88 @@
+---
+import Base from '../layouts/Base.astro';
+import NetworkMap from '../components/NetworkMap.astro';
+import Captura from '../components/Captura.astro';
+import { SITE } from '../data/site';
+import general from '../assets/img/ferromapas-google-earth.jpg';
+import buenosAires from '../assets/img/ferromapas-google-earth-buenos-aires.jpg';
+import cordoba from '../assets/img/ferromapas-google-earth-cordoba.jpg';
+import mendoza from '../assets/img/ferromapas-google-earth-mendoza.jpg';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Ferromapas',
+  description: SITE.description,
+  url: SITE.url,
+  inLanguage: 'es-AR',
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by-nc-nd/2.5/ar/',
+  spatialCoverage: { '@type': 'Place', name: 'Argentina' },
+  creator: [
+    { '@type': 'Person', name: 'Pablo Anglat' },
+    { '@type': 'Person', name: 'Gino Nuñez' },
+    { '@type': 'Person', name: 'Rodrigo Respini' },
+  ],
+  distribution: [
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'application/vnd.google-earth.kmz',
+      contentUrl: `${SITE.url}/descargas/`,
+    },
+  ],
+};
+
+// Capturas de Google Earth. La primera va grande; el resto, en la galería.
+const capturas = [
+  {
+    src: general,
+    alt: 'Captura de Ferromapas abierto en Google Earth, con las líneas ferroviarias dibujadas sobre el relieve',
+    caption: 'Ferromapas abierto en Google Earth.',
+  },
+  {
+    src: buenosAires,
+    alt: 'Captura de Ferromapas en Google Earth sobre Buenos Aires y el conurbano, con las líneas ferroviarias en colores y los nombres y kilómetros de las estaciones',
+    caption: 'Buenos Aires y el conurbano.',
+  },
+  {
+    src: cordoba,
+    alt: 'Captura de Ferromapas en Google Earth sobre la ciudad de Córdoba, con los ramales que salen hacia las sierras y la llanura',
+    caption: 'Córdoba.',
+  },
+  {
+    src: mendoza,
+    alt: 'Captura de Ferromapas en Google Earth sobre el Gran Mendoza, con las vías y paradores entre la precordillera y los viñedos',
+    caption: 'Mendoza.',
+  },
+];
+const [principal, ...galeria] = capturas;
+---
+<Base jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Ferromapas</h1>
+      <p class="lede">
+        Ferromapas es un mapa detallado y de libre acceso de la infraestructura ferroviaria de
+        Argentina en formato de archivo kmz, visible en aplicaciones GIS como Google Earth para
+        Web, para móviles y para ordenadores.
+      </p>
+      <p>
+        Estos mapas, luego pueden ser exportado a otras aplicaciones e incluso a mapas que pueden
+        descargarse a equipos receptores de GPS. En este caso, se va a usar el formato de los mapas
+        de la empresa Garmin, lider en la producción de dispositivos GPS.
+      </p>
+      <p class="actions">
+        <a class="btn" href="/descargas/">Ir a descargas</a>
+        <a class="btn btn-quiet" href="/acerca-de/">Qué es Ferromapas</a>
+      </p>
+    </div>
+    <NetworkMap />
+  </section>
+
+  <section class="screenshot">
+    <Captura {...principal} grande />
+    <div class="gallery">
+      {galeria.map((c) => <Captura {...c} />)}
+    </div>
+  </section>
+</Base>
