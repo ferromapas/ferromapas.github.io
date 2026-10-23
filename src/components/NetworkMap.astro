@@ -13,7 +13,7 @@
       <path class="nm-line" pathLength="1" style="--c: var(--l-urquiza)" d="M310 330 L350 290 L350 190 L380 160" />
       <path class="nm-line" pathLength="1" style="--c: var(--l-sanmartin)" d="M310 330 L170 330 L120 280 L70 280" />
       <path class="nm-line" pathLength="1" style="--c: var(--l-sarmiento)" d="M310 330 L280 360 L210 360 L180 390" />
-      <path class="nm-line" pathLength="1" style="--c: var(--l-roca)" d="M310 330 L310 430 L260 480 L140 480 L110 510 M260 480 L260 590" />
+      <path class="nm-line" pathLength="1" style="--c: var(--l-roca)" d="M310 330 L310 430 L260 480 L140 480 L110 510 M260 480 L260 590 L110 590" />
     </g>
 
     <g class="nm-stops">
@@ -31,6 +31,7 @@
       <circle cx="260" cy="480" r="5" />
       <circle cx="110" cy="510" r="5" />
       <circle cx="260" cy="590" r="5" />
+      <circle cx="110" cy="590" r="5" />
       <rect class="nm-hub" x="296" y="316" width="28" height="28" rx="14" />
     </g>
 
@@ -49,7 +50,22 @@
       <text x="272" y="476">Bahía Blanca</text>
       <text x="110" y="532" text-anchor="middle">Zapala</text>
       <text x="272" y="594">Patagones</text>
+      <text x="110" y="616" text-anchor="middle">Bariloche</text>
       <text class="nm-hub-label" x="334" y="335">Buenos Aires</text>
     </g>
   </svg>
 </figure>
+<script is:inline>
+  // Mejora progresiva: sin JS (o sin IntersectionObserver) la animación corre al cargar.
+  (function () {
+    var f = document.querySelector('.network-map');
+    if (!f || !('IntersectionObserver' in window)) return;
+    f.classList.add('nm-wait');
+    var o = new IntersectionObserver(function (e) {
+      if (!e[0].isIntersecting) return;
+      f.classList.remove('nm-wait');
+      o.disconnect();
+    }, { threshold: 0.3 });
+    o.observe(f);
+  })();
+</script>

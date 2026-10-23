@@ -311,7 +311,8 @@ main {
 .nm-labels text { fill: var(--ink); font-family: var(--font); font-size: 13px; font-weight: 600; }
 .nm-labels .nm-hub-label { font-size: 15px; font-weight: 800; }
 
-/* Momento único de movimiento: las líneas se tienden al cargar. */
+/* Momento único de movimiento: las líneas se tienden al cargar o, en pantallas donde el mapa
+   queda fuera de vista (móviles), al llegar a él. Ver el script en NetworkMap.astro. */
 @media (prefers-reduced-motion: no-preference) {
   .nm-line {
     stroke-dasharray: 1;
@@ -324,6 +325,7 @@ main {
   .nm-line:nth-child(5) { animation-delay: .48s; }
   .nm-line:nth-child(6) { animation-delay: .60s; }
   .nm-stops, .nm-labels { opacity: 0; animation: aparecer .5s ease-out 1.5s forwards; }
+  .nm-wait .nm-line, .nm-wait .nm-stops, .nm-wait .nm-labels { animation-play-state: paused; }
 }
 @keyframes tender { to { stroke-dashoffset: 0; } }
 @keyframes aparecer { to { opacity: 1; } }
