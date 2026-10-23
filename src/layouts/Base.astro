@@ -17,7 +17,7 @@ interface Props {
 const { title, description = SITE.description, jsonLd, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — Mapa ferroviario de Argentina`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImage = new URL('/og.png', Astro.site).href;
+const ogImage = new URL('/og-2.png', Astro.site).href;
 const current = NAV.find((n) => n.href === Astro.url.pathname) ?? NAV[0];
 ---
 <!doctype html>
