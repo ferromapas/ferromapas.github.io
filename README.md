@@ -108,7 +108,7 @@ public/
 
 - **URLs iguales** a las de WordPress; los enlaces viejos de descarga (`/download/60/`,
   `/download/70/`) y restos de WordPress (`/feed/`, `/wp-admin`, `?p=`) redirigen con 301.
-- **SEO:** título y descripción por página, canonical, Open Graph con imagen (`og-2.png`),
+- **SEO:** título y descripción por página, canonical, Open Graph con imagen (`og-3.png`),
   `sitemap.xml`, `robots.txt` y datos estructurados `Dataset` (schema.org) en el inicio.
 - **Rendimiento:** HTML estático, sin JavaScript, CSS mínimo, fuente autoalojada
   (Overpass vía Fontsource, sin depender de Google Fonts), caché de un año para assets con hash.

@@ -28,7 +28,7 @@ argentina (KMZ para Google Earth e instalador para GPS Garmin).
   src/assets/img/             (capturas de Google Earth: Astro las optimiza a WebP)
   public/
     descargas/                (ferromapas_v1.0.0.kmz y ferromapas_v1.0.0.msi)
-    favicon.svg  favicon.ico  apple-touch-icon.png  og-2.png  robots.txt
+    favicon.svg  favicon.ico  apple-touch-icon.png  og-3.png  robots.txt
     _redirects  _headers      (Cloudflare: 301 de enlaces viejos y cabeceras)
 
 Los mapas (.kmz y .msi) se versionan con git (no van en `.gitignore`).

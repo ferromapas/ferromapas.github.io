@@ -17,7 +17,7 @@ interface Props {
 const { title, description = SITE.description, jsonLd, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — Mapa ferroviario de Argentina`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImage = new URL('/og-2.png', Astro.site).href;
+const ogImage = new URL('/og-3.png', Astro.site).href;
 const current = NAV.find((n) => n.href === Astro.url.pathname) ?? NAV[0];
 ---
 <!doctype html>
@@ -43,6 +43,7 @@ const current = NAV.find((n) => n.href === Astro.url.pathname) ?? NAV[0];
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="fb:app_id" content="399095013497992" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
