@@ -28,10 +28,11 @@ argentina (KMZ para Google Earth e instalador para GPS Garmin).
   src/assets/img/             (capturas de Google Earth: Astro las optimiza a WebP)
   public/
     descargas/                (ferromapas_v1.0.0.kmz y ferromapas_v1.0.0.msi)
-    favicon.svg  og.png  robots.txt  CNAME  .nojekyll
+    favicon.svg  favicon.ico  apple-touch-icon.png  og.png  robots.txt
+    _redirects  _headers      (Cloudflare: 301 de enlaces viejos y cabeceras)
 
 Los mapas (.kmz y .msi) se versionan con git (no van en `.gitignore`).
-Si cambian los nombres de las descargas: `src/pages/descargas.astro` y `redirects` en `astro.config.mjs`.
+Si cambian los nombres de las descargas: `src/pages/descargas.astro`, `public/_redirects` y `public/_headers`.
 
 ## Probar en local
 pnpm install && pnpm dev   →  http://localhost:4321

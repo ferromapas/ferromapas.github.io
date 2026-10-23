@@ -1,0 +1,19 @@
+# Enlaces viejos de descarga (plugin Download Monitor de WordPress)
+/download/60 /descargas/ferromapas_v1.0.0.kmz 301
+/download/60/ /descargas/ferromapas_v1.0.0.kmz 301
+/download/70 /descargas/ferromapas_v1.0.0.msi 301
+/download/70/ /descargas/ferromapas_v1.0.0.msi 301
+/download /descargas/ 301
+/download/* /descargas/ 301
+
+# Restos de WordPress que pueden estar enlazados o indexados
+/feed / 301
+/feed/* / 301
+/comments/feed/* / 301
+/wp-login.php / 301
+/wp-admin / 301
+/wp-admin/* / 301
+/xmlrpc.php / 301
+/wp-sitemap* /sitemap.xml 301
+/sitemap-index.xml /sitemap.xml 301
+/sitemap_index.xml /sitemap.xml 301
