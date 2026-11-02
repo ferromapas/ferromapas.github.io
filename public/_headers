@@ -4,6 +4,9 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), camera=(), microphone=()
   Strict-Transport-Security: max-age=31536000
+  # Modo solo-reporte: no bloquea nada, solo avisa en la consola del navegador.
+  # Cuando no haya avisos en las páginas, cambiar el nombre a Content-Security-Policy.
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'
 
 # Archivos con hash de Astro: un año
 /_astro/*

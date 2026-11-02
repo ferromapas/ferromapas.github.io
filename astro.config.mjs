@@ -10,4 +10,6 @@ export default defineConfig({
     format: 'directory',
     inlineStylesheets: 'auto',
   },
+  // Sin scripts en línea: la Content-Security-Policy (public/_headers) permite solo 'self'.
+  vite: { build: { assetsInlineLimit: 0 } },
 });
