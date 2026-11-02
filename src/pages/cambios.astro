@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import { marked } from 'marked';
+import { getReleases } from '../data/changelog';
+
+const releases = await getReleases();
+const dateFormat = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long', timeZone: 'UTC' });
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+const groups = [
+  { key: 'added', title: 'Agregado' },
+  { key: 'changed', title: 'Modificado' },
+  { key: 'removed', title: 'Eliminado' },
+] as const;
+---
+<Base title="Cambios" description="Historial de versiones de Ferromapas: qué se agregó, modificó o eliminó en cada actualización del mapa.">
+  <article class="page">
+    <h1>Cambios</h1>
+    <p>
+      Historial de las versiones del mapa. La última versión se descarga desde
+      <a href="/descargas/">Descargas</a>.
+    </p>
+
+    {releases.map((release) => {
+      const { added, changed, removed } = release.summary;
+      return (
+        <section class="release">
+          <h2>Versión {release.version}</h2>
+          <p class="meta">
+            <time datetime={release.date.toISOString().slice(0, 10)}>{dateFormat.format(release.date)}</time>
+            {release.railways.length > 0 && (
+              <> · {plural(added, 'agregado', 'agregados')}, {plural(changed, 'modificado', 'modificados')}, {plural(removed, 'eliminado', 'eliminados')}</>
+            )}
+          </p>
+          {release.notes.trim() && <div class="notes" set:html={marked.parse(release.notes, { async: false })} />}
+
+          {release.railways.map((railway) => (
+            <details class="railway">
+              <summary>{railway.name}</summary>
+              {groups.map(({ key, title }) =>
+                railway[key].length > 0 && (
+                  <>
+                    <h3>{title} ({railway[key].length})</h3>
+                    <ul>{railway[key].map((item) => <li>{item}</li>)}</ul>
+                  </>
+                ),
+              )}
+            </details>
+          ))}
+        </section>
+      );
+    })}
+  </article>
+</Base>

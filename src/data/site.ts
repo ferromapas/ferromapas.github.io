@@ -16,6 +16,7 @@ export const NAV = [
   { href: '/', label: 'Inicio', color: 'var(--l-mitre)' },
   { href: '/acerca-de/', label: 'Acerca de', color: 'var(--l-sanmartin)' },
   { href: '/descargas/', label: 'Descargas', color: 'var(--l-roca)' },
+  { href: '/cambios/', label: 'Cambios', color: 'var(--l-sarmiento)' },
   { href: '/creditos-de-ferromapas/', label: 'Créditos', color: 'var(--l-belgrano)' },
   { href: '/licencia-de-ferromapas/', label: 'Licencia', color: 'var(--l-urquiza)' },
 ] as const;

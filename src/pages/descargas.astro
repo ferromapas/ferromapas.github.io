@@ -1,5 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import { currentVersion } from '../data/changelog';
+
+// La versión del KMZ sale del último registro en src/data/changelog/.
+const kmzVersion = await currentVersion();
 ---
 <Base title="Descargas" description="Descargá Ferromapas: el mapa ferroviario de Argentina para Google Earth (KMZ) y para GPS Garmin (MapSource).">
   <article class="page">
@@ -12,9 +16,9 @@ import Base from '../layouts/Base.astro';
     <ul class="downloads">
       <li class="download" style="--c: var(--l-roca)">
         <h2>Ferromapas para Google Earth (KMZ)</h2>
-        <p class="meta">Versión 1.0.0</p>
+        <p class="meta">Versión {kmzVersion} · <a href="/cambios/">Ver cambios</a></p>
         <p>Abrilo en Google Earth para Web, para móviles o para ordenadores, o en cualquier aplicación GIS que lea KML/KMZ.</p>
-        <a class="btn" href="/descargas/ferromapas_v1.0.0.kmz" download>Descargar KMZ</a>
+        <a class="btn" href={`/descargas/ferromapas_v${kmzVersion}.kmz`} download>Descargar KMZ</a>
       </li>
       <li class="download" style="--c: var(--l-sarmiento)">
         <h2>Ferromapas para MapSource – Garmin GPS</h2>

@@ -420,6 +420,23 @@ main {
 .download .meta { color: var(--muted); font-size: var(--step--1); font-weight: 600; }
 .download .btn { margin-top: 1rem; }
 
+/* --- Cambios: una sección por versión, un desplegable por ferrocarril ---- */
+.release .meta { color: var(--muted); font-size: var(--step--1); font-weight: 600; }
+.release .notes > * + * { margin-top: 0.8rem; }
+.release .notes h3,
+.release .notes h4 { font-size: var(--step-0); margin-top: 1.2rem; }
+.railway {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: var(--rail) solid var(--line);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+.railway summary { cursor: pointer; font-weight: 700; }
+.railway summary:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
+.page .railway h3 { font-size: var(--step-0); margin-top: 1rem; }
+.page .railway ul { margin-top: 0.4rem; }
+
 /* --- Créditos ----------------------------------------------------------- */
 .page .authors { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; }
 .page .authors li { margin: 0; display: flex; flex-direction: column; }

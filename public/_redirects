@@ -1,6 +1,7 @@
 # Enlaces viejos de descarga (plugin Download Monitor de WordPress)
-/download/60 /descargas/ferromapas_v1.0.0.kmz 301
-/download/60/ /descargas/ferromapas_v1.0.0.kmz 301
+# /download/60 apunta al KMZ: actualizar a la versión nueva en cada release.
+/download/60 /descargas/ferromapas_v1.1.0.kmz 301
+/download/60/ /descargas/ferromapas_v1.1.0.kmz 301
 /download/70 /descargas/ferromapas_v1.0.0.msi 301
 /download/70/ /descargas/ferromapas_v1.0.0.msi 301
 /download /descargas/ 301

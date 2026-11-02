@@ -9,7 +9,7 @@ argentina (KMZ para Google Earth e instalador para GPS Garmin).
   (Astro no envía JS al navegador; mantenerlo así).
 - Idioma es-AR. El contenido se respeta tal cual está en `src/pages/`.
 - URLs iguales al WordPress: /, /acerca-de/, /descargas/, /creditos-de-ferromapas/,
-  /licencia-de-ferromapas/ (`trailingSlash: 'always'`, formato carpeta).
+  /licencia-de-ferromapas/, /cambios/ (`trailingSlash: 'always'`, formato carpeta).
 - Enlaces internos absolutos desde la raíz ("/descargas/"), con barra final.
 - Nombre, menú y contacto en `src/data/site.ts`; el menú también arma `/sitemap.xml`.
 - Estética: diagrama de red ferroviaria. Tokens y estilos en
@@ -21,6 +21,9 @@ argentina (KMZ para Google Earth e instalador para GPS Garmin).
 ## Estructura
   astro.config.mjs
   src/data/site.ts            (nombre, URL, contacto, menú)
+  src/data/changelog/         (X.Y.Z.yaml por versión, generado con `ferromapas-toolkit changelog`)
+  src/data/changelog.ts       (getReleases, currentVersion: la versión del KMZ sale de acá)
+  src/content.config.ts       (colección `changelog`)
   src/layouts/Base.astro      (<head>, encabezado, pie)
   src/components/             (SiteHeader, SiteFooter, NetworkMap, Captura)
   src/pages/                  (una .astro por página + 404 + sitemap.xml.ts)
@@ -32,6 +35,7 @@ argentina (KMZ para Google Earth e instalador para GPS Garmin).
     _redirects  _headers      (Cloudflare: 301 de enlaces viejos y cabeceras)
 
 Los mapas (.kmz y .msi) se versionan con git (no van en `.gitignore`).
+Nueva versión del mapa: generar el YAML en `src/data/changelog/`, completar `notes`, copiar el KMZ a `public/descargas/` y actualizar a mano el destino de `/download/60` en `public/_redirects`.
 Si cambian los nombres de las descargas: `src/pages/descargas.astro`, `public/_redirects` y `public/_headers`.
 
 ## Probar en local
