@@ -14,6 +14,21 @@ a [Astro](https://astro.build). Mismo contenido y mismas URLs, nueva estética d
   una captura: copiá el JPG a `src/assets/img/`, importalo y agregalo a la lista `capturas`.
   El ancho y el alto los toma Astro del propio archivo.
 
+## Publicar una versión nueva del mapa
+
+El KMZ y el registro de cambios se generan con `ferromapas-toolkit` (ver "Generar una versión
+nueva" en su README). Para publicarlos, van en este repo así:
+
+| Qué | Dónde |
+| --- | --- |
+| KMZ nuevo | `public/descargas/ferromapas_vX.Y.Z.kmz` |
+| Registro de cambios | `src/data/changelog/X.Y.Z.yaml` (si el toolkit usó `--out`, ya quedó ahí) |
+
+Además, en `public/_redirects` cambiá el destino de `/download/60` y `/download/60/` al KMZ nuevo.
+
+Después hacé commit de esos tres archivos y push a `main`: Cloudflare compila y publica el
+sitio. `/descargas/` toma el número de versión del registro más reciente.
+
 ## Correr la página y hacer el build
 
 Requiere Node 22.12 o superior. Todos los comandos se corren dentro de `web-astro/`:
