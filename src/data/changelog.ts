@@ -13,7 +13,10 @@ export async function getReleases() {
     });
 }
 
+// Versión que se usa si todavía no hay ningún registro en src/data/changelog/.
+export const DEFAULT_VERSION = '1.0.0';
+
 export async function currentVersion() {
   const [latest] = await getReleases();
-  return latest.version;
+  return latest?.version ?? DEFAULT_VERSION;
 }

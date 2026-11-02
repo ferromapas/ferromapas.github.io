@@ -20,6 +20,8 @@ const groups = [
       <a href="/descargas/">Descargas</a>.
     </p>
 
+    {releases.length === 0 && <p class="note">Todavía no hay cambios registrados.</p>}
+
     {releases.map((release) => {
       const { added, changed, removed } = release.summary;
       return (
