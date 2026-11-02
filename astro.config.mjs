@@ -6,6 +6,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://ferromapas.com.ar',
   trailingSlash: 'always',
+  // Astro 7 pasó el valor por defecto a 'jsx', que quita espacios entre elementos en línea.
+  compressHTML: true,
   build: {
     format: 'directory',
     inlineStylesheets: 'auto',

@@ -16,7 +16,7 @@ a [Astro](https://astro.build). Mismo contenido y mismas URLs, nueva estética d
 
 ## Correr la página y hacer el build
 
-Requiere Node 20.3 o superior. Todos los comandos se corren dentro de `web-astro/`:
+Requiere Node 22.12 o superior. Todos los comandos se corren dentro de `web-astro/`:
 
 ```bash
 cd ~/projects/ferromapas/web-astro
