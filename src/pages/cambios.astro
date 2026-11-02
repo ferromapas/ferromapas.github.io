@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { marked } from 'marked';
 import { getReleases } from '../data/changelog';
+import { renderNotes } from '../data/markdown';
 
 const releases = await getReleases();
 const dateFormat = new Intl.DateTimeFormat('es-AR', { dateStyle: 'long', timeZone: 'UTC' });
@@ -33,7 +33,7 @@ const groups = [
               <> · {plural(added, 'agregado', 'agregados')}, {plural(changed, 'modificado', 'modificados')}, {plural(removed, 'eliminado', 'eliminados')}</>
             )}
           </p>
-          {release.notes.trim() && <div class="notes" set:html={marked.parse(release.notes, { async: false })} />}
+          {release.notes.trim() && <div class="notes" set:html={renderNotes(release.notes)} />}
 
           {release.railways.map((railway) => (
             <details class="railway">
