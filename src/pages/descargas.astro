@@ -5,7 +5,7 @@ import { currentVersion } from '../data/changelog';
 // La versión del KMZ sale del último registro en src/data/changelog/.
 const kmzVersion = await currentVersion();
 ---
-<Base title="Descargas" description="Descargá Ferromapas: el mapa ferroviario de Argentina para Google Earth (KMZ) y para GPS Garmin (MapSource).">
+<Base title="Descargas" description="Descargá Ferromapas: el mapa ferroviario de Argentina para Google Earth (KMZ) y, deprecado, para GPS Garmin (MapSource).">
   <article class="page">
     <h1>Descargas</h1>
     <p>
@@ -21,10 +21,14 @@ const kmzVersion = await currentVersion();
         <a class="btn" href={`/descargas/ferromapas_v${kmzVersion}.kmz`} download>Descargar KMZ</a>
       </li>
       <li class="download" style="--c: var(--l-sarmiento)">
-        <h2>Ferromapas para MapSource – Garmin GPS</h2>
-        <p class="meta">Versión 1.0.0</p>
-        <p>Instalador para cargar el mapa en un GPS Garmin por medio de MapSource.</p>
-        <a class="btn" href="/descargas/ferromapas_v1.0.0.msi" download>Descargar para Garmin</a>
+        <h2>Ferromapas para MapSource – Garmin GPS (deprecado)</h2>
+        <p class="meta">Versión 1.0.0 · Deprecado</p>
+        <p>
+          <strong>Este proyecto está deprecado y no se va a seguir actualizando.</strong>
+          Solo existe la versión 1.0.0, que no incluye los cambios posteriores del mapa.
+          Se mantiene disponible solo por referencia. Para tener el mapa actualizado, usá el KMZ.
+        </p>
+        <a class="btn" href="/descargas/ferromapas_v1.0.0.msi" download>Descargar para Garmin (1.0.0, deprecado)</a>
       </li>
     </ul>
   </article>

@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { SITE } from '../data/site';
 ---
-<Base title="Acerca de" description="Qué es Ferromapas: un mapa ferroviario georreferenciado de Argentina para Google Earth y GPS Garmin.">
+<Base title="Acerca de" description="Qué es Ferromapas: un mapa ferroviario georreferenciado de Argentina para Google Earth (y GPS Garmin, deprecado).">
   <article class="page">
     <h1>Acerca de Ferromapas</h1>
 
@@ -10,15 +10,16 @@ import { SITE } from '../data/site';
       La idea de Ferromapas es construir un mapa ferroviario georeferenciado para Google Earth.
       Para ello se va a usar el formato de archivo estandar KML (Keyhole Markup Language) que es
       el que usa Google Earth. Estos mapas, luego pueden ser exportado a otras aplicaciones e
-      incluso a mapas que pueden descargarse a equipos receptores de GPS. En este caso, se va a
-      usar el formato de los mapas de la empresa Garmin, lider en la producción de dispositivos GPS.
+      incluso a mapas que pueden descargarse a equipos receptores de GPS. Para eso se generó una
+      versión en el formato de los mapas de la empresa Garmin, pero ese proyecto está deprecado:
+      solo existe la versión 1.0.0 y no se va a seguir actualizando.
     </p>
 
     <h2>Formatos</h2>
     <p>Ferromapas viene básicamente en dos formatos:</p>
     <ol class="formats">
       <li>Un archivo .kmz con el mapa para Google Earth.</li>
-      <li>Un instalador para, por medio de MapSource, subir el mapa a GPS Garmin.</li>
+      <li>Un instalador para, por medio de MapSource, subir el mapa a GPS Garmin (deprecado: solo existe la versión 1.0.0 y no se va a seguir actualizando).</li>
     </ol>
     <p><a href="/descargas/">Ver las descargas</a></p>
 

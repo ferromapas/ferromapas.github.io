@@ -4,7 +4,7 @@ export const SITE = {
   name: 'Ferromapas',
   url: 'https://ferromapas.com.ar',
   description:
-    'Mapa detallado y de libre acceso de la infraestructura ferroviaria de Argentina en formato KMZ, para Google Earth y GPS Garmin.',
+    'Mapa detallado y de libre acceso de la infraestructura ferroviaria de Argentina en formato KMZ, para Google Earth (la versión para GPS Garmin está deprecada).',
   email: 'ferromapas@gmail.com',
   facebook: 'https://www.facebook.com/ferromapas',
   lang: 'es-AR',
