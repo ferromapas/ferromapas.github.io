@@ -1,0 +1,282 @@
+version: 1.1.0
+date: 2026-11-06
+notes: |
+  - **Metrotranvía de Mendoza:** pasa a tener su propia sección, con las líneas
+    Gutiérrez - Mendoza - Aeropuerto y Pellegrini - Benegas - Luján de Cuyo y todos
+    sus paradores. Reemplaza al antiguo Metrotranvía Urbano Mendoza.
+  - **Ferrocarril San Martín:** se completa el Div 41 (Fray Luis Beltrán - Tropero Sosa)
+    con sus paradas y los desvíos a las bodegas Santa Ana y Tomba. También se ajusta
+    la ubicación de la estación Gustavo André.
+  - **Ferrocarril Belgrano:** en el ramal A12 (Guaymallén - Las Cuevas) se dibuja la
+    traza que quedó bajo el dique Potrerillos, y se corrigen algunas ubicaciones.
+    También se reordena el ramal A13.
+  - **Reubicación de vías del Ferrocarril Trasandino (proyecto):** proyecto de
+    reubicación del Ferrocarril Trasandino en Potrerillos por la construcción del dique
+    Potrerillos, que nunca se llevó a cabo. Se incluye la traza proyectada con sus
+    puentes, túneles, estaciones y kilometrajes.
+  - **Otros:** nuevo ramal La Plata - 19 de Noviembre (Sarmiento) y Divisadero Pinamar (Roca).
+  - **Ferrocarril Trasandino Central Chileno:** se agregan los túneles, puentes y
+    estaciones del tramo entre Los Andes y Río Blanco, y se ajusta la traza.
+summary:
+  added: 182
+  changed: 7
+  removed: 31
+railways:
+- name: (general)
+  added: []
+  changed:
+  - 'Carpeta (ferrocarril): descripción: ''Ferromapas - Mapas Ferroviarios Electrónicos http://www.fer…'' → ''Ferromapas -
+    Mapas Ferroviarios Electrónicos http://www.fer…'''
+  removed: []
+- name: Ferrocarriles Argentinos / Ferrocarril Belgrano
+  added:
+  - 'Línea A / Ramal A12: Guaymallén - Las Cuevas / Potrerillos KM 50.2 / KM 1133.9'
+  - 'Línea A / Ramal A13: Comandante Leal a Pinas / Comandante Leal KM 618.9'
+  changed:
+  - 'Línea A / Ramal A12: Guaymallén - Las Cuevas / Concha Subercaseaux ? (ex San Ignacio)  (Emb.) KM 47.9 / 1130.5: coordenada:
+    -69.182943,-32.951338 → -69.173834,-32.960635'
+  - 'Línea A / Ramal A12: Guaymallén - Las Cuevas / KM 55 (Emb) KM 55.4 / 1138.1: coordenada: -69.232157,-32.921529 → -69.232037,-32.922165'
+  - 'Línea A / Ramal A12: Guaymallén - Las Cuevas / Ramal A12: Guaymallén - Las Cuevas: vértices: 2473 → 2521'
+  removed:
+  - 'Carpeta Línea A / Ramal A13: Comandante Leal a Pinas / Ramal A13'
+  - 'Línea A / Ramal A12: Guaymallén - Las Cuevas / Potrerillos? KM 50.2 / KM 1133.9'
+  - 'Línea A / Ramal A13: Comandante Leal a Pinas / Ramal A13 / Comandante Leal KM 618.9'
+- name: Ferrocarriles Argentinos / Ferrocarril Roca
+  added:
+  - Zona Este - Provincia de Buenos Aires / General Guido - Vivoratá - Pinamar / Divisadero Pinamar KM 21.2
+  changed: []
+  removed: []
+- name: Ferrocarriles Argentinos / Ferrocarril San Martín
+  added:
+  - 'Carpeta Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Santa Ana'
+  - 'Carpeta Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Tomba'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Cruz del Rosario (Parada) KM 14.4'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Santa Ana / Bodega Santa Ana (ex Basso Toneller y Cia.)'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Santa Ana / Desvío Bodega Santa Ana'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Tomba / Bodega Tomba'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Tomba / Desvío Bodega Tomba'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Tomba / Desvío Bodega Tomba'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / KM 11.2 (Parada) KM 11.2'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / KM 2.5 (Parada) KM 2.5'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / La Superiora (Parada) KM 8.3'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Plumerillo (Parada) KM 21.9'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Teniente Benjamín Matienzo(Parada)  KM 23.9'
+  - Espejo - Gustavo Andre / Gustavo Andre KM 53.1
+  changed:
+  - 'Espejo - Gustavo Andre / Espejo - Gustavo Andre: vértices: 138 → 133'
+  removed:
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Bodega Santa Ana'
+  - 'Div 41: Fray Luis Beltrán - Tropero Sosa / Desvío Bodega Santa Ana'
+  - Espejo - Gustavo Andre / Gustavo Andre? KM 53.1
+  - Espejo - Gustavo Andre / Gustavo Andre? KM 53.1
+- name: Ferrocarriles Argentinos / Ferrocarril Sarmiento
+  added:
+  - Carpeta La Plata - 19 de Noviembre
+  - La Plata - 19 de Noviembre / 19 de Noviembre (FCPdeBsAs)
+  - La Plata - 19 de Noviembre / La Plata - 19 de Noviembre
+  changed: []
+  removed: []
+- name: Ferrocarriles Argentinos / Metrotranvia de Mendoza
+  added:
+  - Carpeta Linea Gutierrez - Mendoza - Aeropuerto
+  - Carpeta Linea Pellegrini - Benegas - Lujan de Cuyo
+  - Linea Gutierrez - Mendoza - Aeropuerto / 25 de Mayo
+  - Linea Gutierrez - Mendoza - Aeropuerto / 9 de Julio
+  - Linea Gutierrez - Mendoza - Aeropuerto / Aeropuerto (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Alta Italia
+  - Linea Gutierrez - Mendoza - Aeropuerto / Avellaneda (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Belgrano (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Burgos
+  - Linea Gutierrez - Mendoza - Aeropuerto / Cruce MTM / FCGSM
+  - Linea Gutierrez - Mendoza - Aeropuerto / Empalme MTM a Lujan de Cuyo (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Espejo?
+  - Linea Gutierrez - Mendoza - Aeropuerto / Garro?
+  - Linea Gutierrez - Mendoza - Aeropuerto / Godoy (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Godoy Cruz (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Gutiérrez
+  - Linea Gutierrez - Mendoza - Aeropuerto / Independencia
+  - Linea Gutierrez - Mendoza - Aeropuerto / Linea Gutierrez - Mendoza - Aeropuerto
+  - Linea Gutierrez - Mendoza - Aeropuerto / Lugones
+  - Linea Gutierrez - Mendoza - Aeropuerto / Luzuriaga
+  - Linea Gutierrez - Mendoza - Aeropuerto / Maza
+  - Linea Gutierrez - Mendoza - Aeropuerto / Mendoza (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Mendoza (MTM) (desactivado)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Moldes
+  - Linea Gutierrez - Mendoza - Aeropuerto / Parador???
+  - Linea Gutierrez - Mendoza - Aeropuerto / Parque TIC
+  - Linea Gutierrez - Mendoza - Aeropuerto / Patricias Mendocinas
+  - Linea Gutierrez - Mendoza - Aeropuerto / Pedro Molina
+  - Linea Gutierrez - Mendoza - Aeropuerto / Pellegrini
+  - Linea Gutierrez - Mendoza - Aeropuerto / Piedra Buena
+  - Linea Gutierrez - Mendoza - Aeropuerto / Progreso
+  - Linea Gutierrez - Mendoza - Aeropuerto / Roca (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Rubilar
+  - Linea Gutierrez - Mendoza - Aeropuerto / San Martín (MTM)
+  - Linea Gutierrez - Mendoza - Aeropuerto / Suipacha
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Agronomia ?
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Benegas
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Besares
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Carrodilla
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Chacabuco (MTM)
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Linea Pellegrini - Benegas - Lujan de Cuyo
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Parador
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Paso
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Pellegrini
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Pueyrredon?
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Rivadavia (MTM)
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / San Martin Sur
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / San Vicente
+  - Linea Pellegrini - Benegas - Lujan de Cuyo / Trapiche
+  changed: []
+  removed: []
+- name: Ferrocarriles Argentinos / Otros Ferrocarriles
+  added: []
+  changed:
+  - 'Desvío a Filtros Obras Sanitarias Mendoza / Desvío a Filtros Obras Sanitarias Mendoza: 1 de 39 vértices distintos'
+  removed:
+  - Carpeta Metrotranvía Urbano Mendoza
+  - Metrotranvía Urbano Mendoza / Godoy Cruz (Metrotranvía Urbano)
+  - Metrotranvía Urbano Mendoza / Gutiérrez
+  - Metrotranvía Urbano Mendoza / Luzuriaga
+  - Metrotranvía Urbano Mendoza / Mendoza (Metrotranvía Urbano)
+  - Metrotranvía Urbano Mendoza / Metrotranvía Urbano Mendoza
+  - Metrotranvía Urbano Mendoza / Nodo de Transferencia
+  - Metrotranvía Urbano Mendoza / Parador 25 de Mayo
+  - Metrotranvía Urbano Mendoza / Parador 9 de Julio
+  - Metrotranvía Urbano Mendoza / Parador Alta Italia
+  - Metrotranvía Urbano Mendoza / Parador Belgrano
+  - Metrotranvía Urbano Mendoza / Parador Independencia
+  - Metrotranvía Urbano Mendoza / Parador Maza
+  - Metrotranvía Urbano Mendoza / Parador Pellegrini
+  - Metrotranvía Urbano Mendoza / Parador Peltier
+  - Metrotranvía Urbano Mendoza / Parador Piedra Buena
+  - Metrotranvía Urbano Mendoza / Parador Progreso
+  - Metrotranvía Urbano Mendoza / Parador San Martín
+- name: Ferrocarriles Argentinos / Proyectos
+  added:
+  - Carpeta Reubicación Vías Ferrocarril Trasandino
+  - Reubicación Vías Ferrocarril Trasandino / Apeadero
+  - Reubicación Vías Ferrocarril Trasandino / Apeadero
+  - Reubicación Vías Ferrocarril Trasandino / Desvío de Cruce Cacheuta
+  - Reubicación Vías Ferrocarril Trasandino / Desvío de Cruce Cacheuta
+  - Reubicación Vías Ferrocarril Trasandino / Empalme KM 29+684.94
+  - Reubicación Vías Ferrocarril Trasandino / Empalme Traza Tecnicagua KM 0.0 / 1115+038.87
+  - Reubicación Vías Ferrocarril Trasandino / Estación
+  - Reubicación Vías Ferrocarril Trasandino / Estación
+  - Reubicación Vías Ferrocarril Trasandino / Estación KM 1+750.00
+  - Reubicación Vías Ferrocarril Trasandino / Estación Potrerillos
+  - Reubicación Vías Ferrocarril Trasandino / Estación Potrerillos
+  - Reubicación Vías Ferrocarril Trasandino / Estación Potrerillos KM 23+183.59
+  - Reubicación Vías Ferrocarril Trasandino / KM 1+450.00
+  - Reubicación Vías Ferrocarril Trasandino / KM 10
+  - Reubicación Vías Ferrocarril Trasandino / KM 11+961.00
+  - Reubicación Vías Ferrocarril Trasandino / KM 12+168.00
+  - Reubicación Vías Ferrocarril Trasandino / KM 15
+  - Reubicación Vías Ferrocarril Trasandino / KM 17+802.54
+  - Reubicación Vías Ferrocarril Trasandino / KM 17+922.54 Límite Tramos 1 y 2
+  - Reubicación Vías Ferrocarril Trasandino / KM 2+050.00
+  - Reubicación Vías Ferrocarril Trasandino / KM 20
+  - Reubicación Vías Ferrocarril Trasandino / KM 22+883.59
+  - Reubicación Vías Ferrocarril Trasandino / KM 23+483,59
+  - Reubicación Vías Ferrocarril Trasandino / KM 25
+  - Reubicación Vías Ferrocarril Trasandino / KM 5
+  - Reubicación Vías Ferrocarril Trasandino / Nuevo Proyecto Tecnicagua
+  - Reubicación Vías Ferrocarril Trasandino / Puente 1
+  - Reubicación Vías Ferrocarril Trasandino / Puente 1
+  - Reubicación Vías Ferrocarril Trasandino / Puente 10
+  - Reubicación Vías Ferrocarril Trasandino / Puente 10
+  - Reubicación Vías Ferrocarril Trasandino / Puente 11
+  - Reubicación Vías Ferrocarril Trasandino / Puente 11
+  - Reubicación Vías Ferrocarril Trasandino / Puente 12
+  - Reubicación Vías Ferrocarril Trasandino / Puente 12
+  - Reubicación Vías Ferrocarril Trasandino / Puente 13
+  - Reubicación Vías Ferrocarril Trasandino / Puente 13
+  - Reubicación Vías Ferrocarril Trasandino / Puente 14
+  - Reubicación Vías Ferrocarril Trasandino / Puente 14
+  - Reubicación Vías Ferrocarril Trasandino / Puente 15
+  - Reubicación Vías Ferrocarril Trasandino / Puente 15
+  - Reubicación Vías Ferrocarril Trasandino / Puente 16
+  - Reubicación Vías Ferrocarril Trasandino / Puente 16
+  - Reubicación Vías Ferrocarril Trasandino / Puente 17
+  - Reubicación Vías Ferrocarril Trasandino / Puente 17
+  - Reubicación Vías Ferrocarril Trasandino / Puente 18
+  - Reubicación Vías Ferrocarril Trasandino / Puente 18
+  - Reubicación Vías Ferrocarril Trasandino / Puente 19
+  - Reubicación Vías Ferrocarril Trasandino / Puente 19
+  - Reubicación Vías Ferrocarril Trasandino / Puente 2
+  - Reubicación Vías Ferrocarril Trasandino / Puente 2
+  - Reubicación Vías Ferrocarril Trasandino / Puente 20
+  - Reubicación Vías Ferrocarril Trasandino / Puente 20
+  - Reubicación Vías Ferrocarril Trasandino / Puente 21
+  - Reubicación Vías Ferrocarril Trasandino / Puente 21
+  - Reubicación Vías Ferrocarril Trasandino / Puente 22
+  - Reubicación Vías Ferrocarril Trasandino / Puente 22
+  - Reubicación Vías Ferrocarril Trasandino / Puente 23
+  - Reubicación Vías Ferrocarril Trasandino / Puente 23
+  - Reubicación Vías Ferrocarril Trasandino / Puente 24
+  - Reubicación Vías Ferrocarril Trasandino / Puente 24
+  - Reubicación Vías Ferrocarril Trasandino / Puente 3
+  - Reubicación Vías Ferrocarril Trasandino / Puente 3
+  - Reubicación Vías Ferrocarril Trasandino / Puente 4
+  - Reubicación Vías Ferrocarril Trasandino / Puente 4
+  - Reubicación Vías Ferrocarril Trasandino / Puente 5
+  - Reubicación Vías Ferrocarril Trasandino / Puente 5
+  - Reubicación Vías Ferrocarril Trasandino / Puente 6
+  - Reubicación Vías Ferrocarril Trasandino / Puente 6
+  - Reubicación Vías Ferrocarril Trasandino / Puente 7
+  - Reubicación Vías Ferrocarril Trasandino / Puente 7
+  - Reubicación Vías Ferrocarril Trasandino / Puente 8
+  - Reubicación Vías Ferrocarril Trasandino / Puente 8
+  - Reubicación Vías Ferrocarril Trasandino / Puente 9
+  - Reubicación Vías Ferrocarril Trasandino / Puente 9
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 1
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 1
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 10
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 10
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 11
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 11
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 12
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 12
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 2
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 2
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 3
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 3
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 4
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 4
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 5
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 5
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 6
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 6
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 7
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 7
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 8
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 8
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 9
+  - Reubicación Vías Ferrocarril Trasandino / Túnel 9
+  changed: []
+  removed: []
+- name: Ferrocarriles de Chile / Ferrocarril Trasandino Central Chileno
+  added:
+  - Empalme FCT / FdE
+  - Los Andes (FCT) KM 0
+  - Los Andes (Ferrocarriles del Estado)
+  - Puente 10.20 m KM 26.730
+  - Puente 2 tramos 20 m c/u KM 27.290
+  - Río Blanco KM 33.900
+  - Túnel 1 (55 m) KM 19.117
+  - Túnel 2 (47 m) KM 24.135
+  - Túnel 3 (69 m) KM 24.266
+  - Túnel 4 (240 m) KM 26.600
+  - Túnel 5 (63 m) KM 26.780
+  - Túnel 6 (41.50 m) KM 26.958
+  - Túnel 7 (66.5 m) KM 27.022
+  - Vilcuya KM 15.624
+  changed:
+  - 'Ferrocarril Trasandino Central Chileno: vértices: 1299 → 1287'
+  removed:
+  - KM 16.12
+  - KM 20 (1073.8 msdn)
+  - KM 27?
+  - Los Andes KM 0 (830.4 msnm)
+  - Río Blanco KM 43.9 (1440 msdn)
+  - San Pablo KM 10 (984.9 msnm)
