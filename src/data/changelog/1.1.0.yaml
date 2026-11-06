@@ -22,12 +22,6 @@ summary:
   changed: 7
   removed: 31
 railways:
-- name: (general)
-  added: []
-  changed:
-  - 'Carpeta (ferrocarril): descripción: ''Ferromapas - Mapas Ferroviarios Electrónicos http://www.fer…'' → ''Ferromapas -
-    Mapas Ferroviarios Electrónicos http://www.fer…'''
-  removed: []
 - name: Ferrocarriles Argentinos / Ferrocarril Belgrano
   added:
   - 'Línea A / Ramal A12: Guaymallén - Las Cuevas / Potrerillos KM 50.2 / KM 1133.9'
