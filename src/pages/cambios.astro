@@ -35,19 +35,24 @@ const groups = [
           </p>
           {release.notes.trim() && <div class="notes" set:html={renderNotes(release.notes)} />}
 
-          {release.railways.map((railway) => (
-            <details class="railway">
-              <summary>{railway.name}</summary>
-              {groups.map(({ key, title }) =>
-                railway[key].length > 0 && (
-                  <>
-                    <h3>{title} ({railway[key].length})</h3>
-                    <ul>{railway[key].map((item) => <li>{item}</li>)}</ul>
-                  </>
-                ),
-              )}
+          {release.railways.length > 0 && (
+            <details class="more">
+              <summary>Ver más detalle</summary>
+            {release.railways.map((railway) => (
+              <details class="railway">
+                <summary>{railway.name}</summary>
+                {groups.map(({ key, title }) =>
+                  railway[key].length > 0 && (
+                    <>
+                      <h3>{title} ({railway[key].length})</h3>
+                      <ul>{railway[key].map((item) => <li>{item}</li>)}</ul>
+                    </>
+                  ),
+                )}
+              </details>
+            ))}
             </details>
-          ))}
+          )}
         </section>
       );
     })}

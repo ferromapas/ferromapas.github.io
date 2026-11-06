@@ -500,3 +500,5 @@ main {
   .page h2::before { left: -2.5rem; }
   .download { padding: 1.25rem 1.1rem 1.25rem 1.25rem; }
 }
+.release .more > summary { cursor: pointer; font-weight: 700; margin-top: 1rem; }
+.release .more > summary:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
